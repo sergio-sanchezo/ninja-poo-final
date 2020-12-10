@@ -1,0 +1,139 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://Assets/Zombie/png/male/Attack (7).png" type="Texture" id=1]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (10).png" type="Texture" id=2]
+[ext_resource path="res://Assets/Zombie/png/male/Attack (5).png" type="Texture" id=3]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (11).png" type="Texture" id=4]
+[ext_resource path="res://Assets/Zombie/png/male/Attack (1).png" type="Texture" id=5]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (3).png" type="Texture" id=6]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (8).png" type="Texture" id=7]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (9).png" type="Texture" id=8]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (9).png" type="Texture" id=9]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (7).png" type="Texture" id=10]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (12).png" type="Texture" id=11]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (15).png" type="Texture" id=12]
+[ext_resource path="res://Assets/Zombie/png/male/Attack (2).png" type="Texture" id=13]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (12).png" type="Texture" id=14]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (6).png" type="Texture" id=15]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (5).png" type="Texture" id=16]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (3).png" type="Texture" id=17]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (13).png" type="Texture" id=18]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (10).png" type="Texture" id=19]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (8).png" type="Texture" id=20]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (7).png" type="Texture" id=21]
+[ext_resource path="res://Assets/Zombie/png/male/Attack (3).png" type="Texture" id=22]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (4).png" type="Texture" id=23]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (1).png" type="Texture" id=24]
+[ext_resource path="res://Assets/Zombie/png/male/Attack (8).png" type="Texture" id=25]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (4).png" type="Texture" id=26]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (5).png" type="Texture" id=27]
+[ext_resource path="res://Assets/Zombie/png/male/Attack (4).png" type="Texture" id=28]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (2).png" type="Texture" id=29]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (14).png" type="Texture" id=30]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (6).png" type="Texture" id=31]
+[ext_resource path="res://Assets/Zombie/png/male/Dead (11).png" type="Texture" id=32]
+[ext_resource path="res://Assets/Zombie/png/male/Attack (6).png" type="Texture" id=33]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (1).png" type="Texture" id=34]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (1).png" type="Texture" id=35]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (2).png" type="Texture" id=36]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (3).png" type="Texture" id=37]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (10).png" type="Texture" id=38]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (8).png" type="Texture" id=39]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (9).png" type="Texture" id=40]
+[ext_resource path="res://Assets/Zombie/png/male/Idle (2).png" type="Texture" id=41]
+[ext_resource path="res://Enemies/Zombie.gd" type="Script" id=42]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (7).png" type="Texture" id=43]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (6).png" type="Texture" id=44]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (4).png" type="Texture" id=45]
+[ext_resource path="res://Assets/Zombie/png/male/Walk (5).png" type="Texture" id=46]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 34 ), ExtResource( 41 ), ExtResource( 17 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 10 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 30 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 13 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 3 ), ExtResource( 33 ), ExtResource( 1 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "Attack",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 13.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 29 ), ExtResource( 6 ), ExtResource( 23 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 21 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 32 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "Dead",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 75.9999, 113.248 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 0.22126, 17.7356 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 0.503788, 17.716 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 5.526, 109.381 )
+
+[node name="Zombie" type="KinematicBody2D"]
+collision_layer = 4
+script = ExtResource( 42 )
+
+[node name="spr_Zombie" type="AnimatedSprite" parent="."]
+position = Vector2( 1.414, -1.2 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "Walk"
+frame = 9
+playing = true
+
+[node name="Coll_Zombie" type="CollisionShape2D" parent="."]
+position = Vector2( 4.15216, 10.2937 )
+shape = SubResource( 2 )
+
+[node name="Ray_Zombie_Right" type="RayCast2D" parent="."]
+position = Vector2( 85.9685, 101.788 )
+enabled = true
+
+[node name="Ray_Zombie_Left" type="RayCast2D" parent="."]
+position = Vector2( -81.2867, 98.7207 )
+enabled = true
+
+[node name="Are_Zombie" type="Area2D" parent="."]
+position = Vector2( 41.1578, 77.542 )
+collision_layer = 4
+collision_mask = 8
+
+[node name="Coll_Are_Zombie" type="CollisionShape2D" parent="Are_Zombie"]
+shape = SubResource( 3 )
+
+[node name="Are_Zombie_2" type="Area2D" parent="."]
+position = Vector2( -67.1509, 73.0677 )
+collision_layer = 4
+collision_mask = 8
+
+[node name="Coll_Are2_Zombie" type="CollisionShape2D" parent="Are_Zombie_2"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Attack_Time" type="Timer" parent="."]
+
+[node name="Are_Disparos" type="Area2D" parent="."]
+position = Vector2( 0.314972, 17.0089 )
+collision_layer = 4
+collision_mask = 8
+
+[node name="Coll_Are_Disp" type="CollisionShape2D" parent="Are_Disparos"]
+shape = SubResource( 5 )
+[connection signal="animation_finished" from="spr_Zombie" to="." method="_on_spr_Zombie_animation_finished"]
+[connection signal="area_entered" from="Are_Zombie" to="." method="_on_Are_Zombie_area_entered"]
+[connection signal="area_entered" from="Are_Zombie_2" to="." method="_on_Are_Zombie_2_area_entered"]
+[connection signal="timeout" from="Attack_Time" to="." method="_on_Attack_Time_timeout"]
+[connection signal="area_entered" from="Are_Disparos" to="." method="_on_Are_Disparos_area_entered"]

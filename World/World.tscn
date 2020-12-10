@@ -1,0 +1,195 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/fuentes/AldotheApache.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/golden_trophy.png" type="Texture" id=3]
+[ext_resource path="res://World/UI/fondo.png" type="Texture" id=4]
+[ext_resource path="res://World/UI/pause2.png" type="Texture" id=5]
+[ext_resource path="res://World/UI/pause.png" type="Texture" id=6]
+[ext_resource path="res://World/UI/pause3.png" type="Texture" id=7]
+[ext_resource path="res://Player/Sprites/Kunai.png" type="Texture" id=8]
+[ext_resource path="res://World/UI/heart.png" type="Texture" id=9]
+[ext_resource path="res://World/World.gd" type="Script" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 274.062, 3104.32 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 1, 0 )
+cell_size = Vector2( 128, 128 )
+format = 1
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 132.225, 91.9574 )
+collision_layer = 1
+collision_mask = 2147483648
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 1.5, 1.5 )
+limit_left = 0
+limit_top = -1215752192
+limit_right = 20000
+limit_bottom = 750
+drag_margin_v_enabled = true
+drag_margin_top = 1.0
+drag_margin_bottom = 1.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+pause_mode = 1
+
+[node name="FondoUI" type="TextureRect" parent="UI"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseButton" type="TextureButton" parent="UI"]
+margin_left = 1218.23
+margin_top = 5.05954
+margin_right = 1274.23
+margin_bottom = 61.0595
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kunai" type="TextureRect" parent="UI"]
+margin_left = 12.9554
+margin_top = 16.2607
+margin_right = 172.955
+margin_bottom = 56.2607
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Times" type="Label" parent="UI/Kunai"]
+margin_left = 153.753
+margin_top = 8.00004
+margin_right = 165.753
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 1 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Amount" type="Label" parent="UI/Kunai"]
+margin_left = 173.254
+margin_top = 8.0
+margin_right = 213.254
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 2 )
+text = "20
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life" type="TextureRect" parent="UI"]
+margin_left = 373.451
+margin_top = 7.05954
+margin_right = 429.451
+margin_bottom = 60.0595
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Times" type="Label" parent="UI/Life"]
+margin_left = 71.2572
+margin_top = 17.2012
+margin_right = 83.2572
+margin_bottom = 37.2012
+custom_fonts/font = SubResource( 1 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Amount" type="Label" parent="UI/Life"]
+margin_left = 88.5271
+margin_top = 17.2012
+margin_right = 128.527
+margin_bottom = 60.2012
+custom_fonts/font = SubResource( 1 )
+text = "100
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+offset = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 1, 1 )
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -5.03967, -50.3968 )
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 2000, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/Sky"]
+margin_left = -3.00024
+margin_top = -390.865
+margin_right = 1997.0
+margin_bottom = 752.135
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -5.03967, -50.3968 )
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 2000, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/Mountains"]
+margin_left = -3.00024
+margin_top = -390.865
+margin_right = 1997.0
+margin_bottom = 752.135
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trofeo" type="Sprite" parent="."]
+position = Vector2( 154.499, 334.43 )
+scale = Vector2( 0.247172, 0.247172 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Trofeo" type="Area2D" parent="Trofeo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trofeo/Trofeo"]
+position = Vector2( -10.6082, -7.57727 )
+shape = SubResource( 3 )
+[connection signal="pressed" from="UI/PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="body_entered" from="Trofeo/Trofeo" to="Player" method="_on_Trofeo_body_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Desierto.ogg-d859838911ee8f001a636adbaa6ced0a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/Desierto.ogg"
+dest_files=[ "res://.import/Desierto.ogg-d859838911ee8f001a636adbaa6ced0a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

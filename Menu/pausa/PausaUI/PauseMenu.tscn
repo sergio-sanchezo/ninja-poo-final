@@ -1,0 +1,97 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/pergamino.png" type="Texture" id=1]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/restart.png" type="Texture" id=2]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/play.png" type="Texture" id=3]
+[ext_resource path="res://Assets/fuentes/AldotheApache.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Menu/pausa/PausaUI/PauseMenu.gd" type="Script" id=5]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/restart2.png" type="Texture" id=6]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/play2.png" type="Texture" id=7]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/play3.png" type="Texture" id=8]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/restart3.png" type="Texture" id=9]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/return.png" type="Texture" id=10]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/500px-UN_logotipo.svg.png" type="Texture" id=11]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/return2.png" type="Texture" id=12]
+[ext_resource path="res://Menu/pausa/PausaAssetsUI/return3.png" type="Texture" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 82
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="PauseMenu" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 5 )
+
+[node name="Pergamino" type="TextureRect" parent="."]
+margin_left = 411.341
+margin_top = 112.705
+margin_right = 1311.34
+margin_bottom = 1172.71
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="TextureButton" parent="."]
+margin_left = 485.716
+margin_top = 360.231
+margin_right = 575.716
+margin_bottom = 450.231
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="TextureButton" parent="."]
+margin_left = 589.481
+margin_top = 360.231
+margin_right = 679.481
+margin_bottom = 450.231
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="TextureButton" parent="."]
+margin_left = 693.889
+margin_top = 360.231
+margin_right = 783.889
+margin_bottom = 450.231
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pausa" type="Label" parent="."]
+margin_left = 537.38
+margin_top = 233.414
+margin_right = 728.38
+margin_bottom = 300.414
+custom_fonts/font = SubResource( 1 )
+custom_constants/shadow_offset_y = 5
+text = "PAUSA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UN" type="TextureRect" parent="."]
+margin_left = 579.01
+margin_top = 497.751
+margin_right = 679.01
+margin_bottom = 542.751
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]

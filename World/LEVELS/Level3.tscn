@@ -1,0 +1,123 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://World/World.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/LEVELS/Level3.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Desert/TileSet3.tres" type="TileSet" id=3]
+[ext_resource path="res://Assets/Desert/BG/1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Desert/BG/3.png" type="Texture" id=5]
+[ext_resource path="res://Objetos/disco.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemies/Boss.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemies/Robot.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Zombie.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/MZombie.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objetos/KunaiRec.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Music/Desierto.ogg" type="AudioStream" id=12]
+
+[node name="Level3" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Disco" parent="." index="0" instance=ExtResource( 6 )]
+position = Vector2( 1013.3, 122.287 )
+movimiento = 190
+
+[node name="Disco2" parent="." index="1" instance=ExtResource( 6 )]
+position = Vector2( 1498.45, 504.522 )
+movimiento = 200
+
+[node name="Disco3" parent="." index="2" instance=ExtResource( 6 )]
+position = Vector2( 3186.55, 114.462 )
+movimiento = 600
+
+[node name="Disco4" parent="." index="3" instance=ExtResource( 6 )]
+position = Vector2( 3431.53, 121.597 )
+movimiento = 300
+
+[node name="Disco5" parent="." index="4" instance=ExtResource( 6 )]
+position = Vector2( 4109.38, 119.219 )
+movimiento = -600
+
+[node name="Disco6" parent="." index="5" instance=ExtResource( 6 )]
+position = Vector2( 6094.72, 378.466 )
+movimiento = 350
+
+[node name="Disco7" parent="." index="6" instance=ExtResource( 6 )]
+position = Vector2( 7098.41, 235.761 )
+movimiento = -350
+
+[node name="Disco8" parent="." index="7" instance=ExtResource( 6 )]
+position = Vector2( 7375.03, 121.597 )
+movimiento = 350
+
+[node name="Disco9" parent="." index="8" instance=ExtResource( 6 )]
+position = Vector2( 10890.8, 376.087 )
+movimiento = 1000
+
+[node name="Disco10" parent="." index="9" instance=ExtResource( 6 )]
+position = Vector2( 16238.6, 242.896 )
+movimiento = 200
+
+[node name="TileMap" parent="." index="10"]
+tile_set = ExtResource( 3 )
+tile_data = PoolIntArray( 132, 12, 0, 133, 13, 0, 134, 13, 0, 135, 14, 0, 139, 0, 0, 140, 1, 0, 141, 1, 0, 142, 1, 0, 143, 1, 0, 144, 1, 0, 145, 1, 0, 146, 2, 0, 65542, 12, 0, 65543, 13, 0, 65544, 13, 0, 65545, 14, 0, 65560, 12, 0, 65561, 13, 0, 65562, 13, 0, 65563, 13, 0, 65564, 13, 0, 65565, 13, 0, 65566, 13, 0, 65567, 13, 0, 65568, 14, 0, 65593, 0, 0, 65594, 1, 0, 65595, 1, 0, 65596, 2, 0, 65675, 3, 0, 65676, 4, 0, 65677, 4, 0, 65678, 4, 0, 65679, 4, 0, 65680, 4, 0, 65681, 4, 0, 65682, 5, 0, 131124, 0, 0, 131125, 1, 0, 131126, 1, 0, 131127, 2, 0, 131129, 3, 0, 131130, 4, 0, 131131, 4, 0, 131132, 5, 0, 131139, 12, 0, 131140, 14, 0, 131145, 0, 0, 131146, 1, 0, 131147, 1, 0, 131148, 1, 0, 131149, 1, 0, 131150, 1, 0, 131151, 1, 0, 131152, 1, 0, 131153, 1, 0, 131154, 2, 0, 131184, 0, 0, 131185, 2, 0, 131198, 12, 0, 131199, 13, 0, 131200, 13, 0, 131201, 13, 0, 131202, 14, 0, 131211, 3, 0, 131212, 4, 0, 131213, 4, 0, 131214, 4, 0, 131215, 4, 0, 131216, 4, 0, 131217, 4, 0, 131218, 5, 0, 196608, 0, 0, 196609, 1, 0, 196610, 1, 0, 196611, 2, 0, 196624, 0, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0, 196628, 1, 0, 196629, 1, 0, 196630, 2, 0, 196642, 12, 0, 196643, 13, 0, 196644, 13, 0, 196645, 13, 0, 196646, 13, 0, 196647, 13, 0, 196648, 14, 0, 196655, 0, 0, 196656, 1, 0, 196657, 1, 0, 196658, 2, 0, 196660, 3, 0, 196661, 4, 0, 196662, 4, 0, 196663, 5, 0, 196665, 3, 0, 196666, 4, 0, 196667, 4, 0, 196668, 5, 0, 196681, 3, 0, 196682, 4, 0, 196683, 4, 0, 196684, 4, 0, 196685, 4, 0, 196686, 4, 0, 196687, 4, 0, 196688, 4, 0, 196689, 4, 0, 196690, 5, 0, 196692, 12, 0, 196693, 13, 0, 196694, 13, 0, 196695, 13, 0, 196696, 13, 0, 196697, 13, 0, 196698, 13, 0, 196699, 13, 0, 196700, 13, 0, 196701, 13, 0, 196702, 14, 0, 196706, 0, 0, 196707, 1, 0, 196708, 1, 0, 196709, 1, 0, 196710, 1, 0, 196711, 2, 0, 196720, 3, 0, 196721, 5, 0, 196731, 12, 0, 196732, 14, 0, 196747, 3, 0, 196748, 4, 0, 196749, 4, 0, 196750, 4, 0, 196751, 4, 0, 196752, 4, 0, 196753, 4, 0, 196754, 5, 0, 196758, 0, 0, 196759, 1, 0, 196760, 1, 0, 196761, 1, 0, 196762, 1, 0, 196763, 2, 0, 262144, 3, 0, 262145, 4, 0, 262146, 4, 0, 262147, 5, 0, 262155, 12, 0, 262156, 13, 0, 262157, 14, 0, 262160, 3, 0, 262161, 4, 0, 262162, 4, 0, 262163, 4, 0, 262164, 4, 0, 262165, 4, 0, 262166, 5, 0, 262186, 0, 0, 262187, 1, 0, 262188, 1, 0, 262189, 2, 0, 262191, 3, 0, 262192, 4, 0, 262193, 4, 0, 262194, 5, 0, 262196, 3, 0, 262197, 4, 0, 262198, 4, 0, 262199, 5, 0, 262201, 3, 0, 262202, 4, 0, 262203, 4, 0, 262204, 5, 0, 262207, 12, 0, 262208, 13, 0, 262209, 14, 0, 262217, 3, 0, 262218, 4, 0, 262219, 4, 0, 262220, 4, 0, 262221, 4, 0, 262222, 4, 0, 262223, 4, 0, 262224, 4, 0, 262225, 4, 0, 262226, 5, 0, 262242, 3, 0, 262243, 4, 0, 262244, 4, 0, 262245, 4, 0, 262246, 4, 0, 262247, 5, 0, 262250, 0, 0, 262251, 1, 0, 262252, 1, 0, 262253, 1, 0, 262254, 2, 0, 262256, 3, 0, 262257, 5, 0, 262283, 3, 0, 262284, 4, 0, 262285, 4, 0, 262286, 4, 0, 262287, 4, 0, 262288, 4, 0, 262289, 4, 0, 262290, 5, 0, 262294, 3, 0, 262295, 4, 0, 262296, 4, 0, 262297, 4, 0, 262298, 4, 0, 262299, 5, 0, 327680, 3, 0, 327681, 4, 0, 327682, 4, 0, 327683, 5, 0, 327696, 3, 0, 327697, 4, 0, 327698, 4, 0, 327699, 4, 0, 327700, 4, 0, 327701, 4, 0, 327702, 5, 0, 327722, 3, 0, 327723, 4, 0, 327724, 4, 0, 327725, 5, 0, 327727, 3, 0, 327728, 4, 0, 327729, 4, 0, 327730, 5, 0, 327732, 3, 0, 327733, 4, 0, 327734, 4, 0, 327735, 5, 0, 327737, 3, 0, 327738, 4, 0, 327739, 4, 0, 327740, 5, 0, 327753, 3, 0, 327754, 4, 0, 327755, 4, 0, 327756, 4, 0, 327757, 4, 0, 327758, 4, 0, 327759, 4, 0, 327760, 4, 0, 327761, 4, 0, 327762, 5, 0, 327778, 3, 0, 327779, 4, 0, 327780, 4, 0, 327781, 4, 0, 327782, 4, 0, 327783, 5, 0, 327786, 3, 0, 327787, 4, 0, 327788, 4, 0, 327789, 4, 0, 327790, 5, 0, 327792, 3, 0, 327793, 5, 0, 327796, 12, 0, 327797, 13, 0, 327798, 13, 0, 327799, 13, 0, 327800, 13, 0, 327801, 14, 0, 327819, 3, 0, 327820, 4, 0, 327821, 4, 0, 327822, 4, 0, 327823, 4, 0, 327824, 4, 0, 327825, 4, 0, 327826, 5, 0, 327830, 3, 0, 327831, 4, 0, 327832, 4, 0, 327833, 4, 0, 327834, 4, 0, 327835, 5, 0 )
+
+[node name="TextureRect" parent="ParallaxBackground/Sky" index="0"]
+texture = ExtResource( 4 )
+
+[node name="TextureRect" parent="ParallaxBackground/Mountains" index="0"]
+texture = ExtResource( 5 )
+
+[node name="Trofeo" parent="." index="14"]
+position = Vector2( 19591.8, 315.721 )
+
+[node name="Robot" parent="." index="15" instance=ExtResource( 8 )]
+position = Vector2( 2146.09, 264.302 )
+
+[node name="Boss" parent="." index="16" instance=ExtResource( 7 )]
+position = Vector2( 2788.26, 271.437 )
+
+[node name="Zombie" parent="." index="17" instance=ExtResource( 9 )]
+position = Vector2( 4500.5, 261.923 )
+
+[node name="Zombie2" parent="." index="18" instance=ExtResource( 10 )]
+position = Vector2( 5018.99, 252.41 )
+
+[node name="Robot2" parent="." index="19" instance=ExtResource( 8 )]
+position = Vector2( 9458.67, 135.867 )
+
+[node name="Zombie3" parent="." index="20" instance=ExtResource( 9 )]
+position = Vector2( 10295.9, 133.489 )
+
+[node name="Robot3" parent="." index="21" instance=ExtResource( 8 )]
+position = Vector2( 11785, 259.545 )
+
+[node name="Boss2" parent="." index="22" instance=ExtResource( 7 )]
+position = Vector2( 12690.3, 269.059 )
+
+[node name="Robot4" parent="." index="23" instance=ExtResource( 8 )]
+position = Vector2( 17887.1, -118.623 )
+
+[node name="Zombie4" parent="." index="24" instance=ExtResource( 9 )]
+position = Vector2( 18641, -121.001 )
+
+[node name="RecolectarK" parent="." index="25" instance=ExtResource( 11 )]
+position = Vector2( 378.705, 354.682 )
+
+[node name="RecolectarK2" parent="." index="26" instance=ExtResource( 11 )]
+position = Vector2( 2483.94, 352.303 )
+
+[node name="RecolectarK3" parent="." index="27" instance=ExtResource( 11 )]
+position = Vector2( 3671.46, -11.5943 )
+
+[node name="RecolectarK4" parent="." index="28" instance=ExtResource( 11 )]
+position = Vector2( 6419.47, 330.898 )
+
+[node name="RecolectarK5" parent="." index="29" instance=ExtResource( 11 )]
+position = Vector2( 6921.31, 216.734 )
+
+[node name="RecolectarK6" parent="." index="30" instance=ExtResource( 11 )]
+position = Vector2( 19313.8, 2.67619 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="31"]
+stream = ExtResource( 12 )
+volume_db = -20.0
+autoplay = true

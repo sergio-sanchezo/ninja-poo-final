@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Montaña.ogg-006696bbdfb983f8b59d4d73d8f5b781.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/Montaña.ogg"
+dest_files=[ "res://.import/Montaña.ogg-006696bbdfb983f8b59d4d73d8f5b781.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

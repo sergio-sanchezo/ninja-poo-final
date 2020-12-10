@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/500px-UN_logotipo.svg.png-e4e36b0f12557ba2ca508aa9bb7197fc.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Menu/pausa/PausaAssetsUI/500px-UN_logotipo.svg.png"
+dest_files=[ "res://.import/500px-UN_logotipo.svg.png-e4e36b0f12557ba2ca508aa9bb7197fc.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

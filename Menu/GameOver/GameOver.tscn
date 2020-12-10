@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Menu/GameOver/GameOverAssets/restart2.png" type="Texture" id=1]
+[ext_resource path="res://Menu/GameOver/GameOverAssets/restart3.png" type="Texture" id=2]
+[ext_resource path="res://Menu/GameOver/GameOverAssets/restart.png" type="Texture" id=3]
+[ext_resource path="res://Assets/fuentes/AldotheApache.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Field-map/png/BG/BG.png" type="Texture" id=5]
+[ext_resource path="res://Menu/GameOver/GameOver.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Music/GameOver.ogg" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 109
+font_data = ExtResource( 4 )
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.145
+anchor_bottom = 1.174
+margin_right = -0.600098
+margin_bottom = -0.280029
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.147
+anchor_bottom = 1.173
+margin_left = -6.08472
+margin_top = 86.7827
+margin_right = -194.24
+margin_bottom = -37.777
+custom_constants/separation = 120
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.305882, 0.6, 0.0901961, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 5
+text = "GAME OVER"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 211.0
+margin_right = 1280.0
+margin_bottom = 392.0
+alignment = 1
+
+[node name="Restart" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 550.0
+margin_right = 730.0
+margin_bottom = 181.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -20.0
+autoplay = true
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Restart" to="." method="_on_TextureButton_pressed"]
